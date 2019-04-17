@@ -1,0 +1,79 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+ 
+using namespace std;
+ 
+ double a, b, c, p, q, delta, x1, x2;
+     int liczba;
+      
+      
+      
+void funkcje_programu()
+{
+ 
+ 
+      cout << endl << "----------------------------------------" << endl;
+      cout << "[1] Licz postac kanoniczna z ogolnej." << endl;
+      cout << "[2] Licz postac ogolna z kanonicznej." << endl;
+      cout << "[0] Wyjdz z programu." << endl;
+}
+ 
+double pobierz(double liczba){
+       while(!(cin>>liczba)){
+            cout << "Podaj poprawna wartosc: ";
+  cin.clear(); 
+  cin.sync();}
+  return liczba;
+       }
+ 
+void parametry()
+{
+         cout    << endl  << endl  << "Parametry:" << endl;
+     
+    cout << "Dziedzina: Rzeczywista" << endl;
+    cout << "Zbior wartosci: <"; 
+    if(a<0) cout << q << ",-oo)" <<  endl;
+    else cout << q << ",+oo)" << endl;
+    cout << "Pierwiastek z delty: " << sqrt(delta) << endl;
+    cout << "Miejsce zerowe: ";
+  if(delta > 0) 
+  {
+     x1 = (-b - sqrt(delta)) / (2*a);
+     x2 = (-b + sqrt(delta)) / (2*a);
+     cout << "x=" << x1 << " x=" << x2 << endl;
+      
+     cout << "f(x)>0 dla x: ";
+     if(a>0) cout << "(-oo," << x1 <<"),(" << x2 << "+oo)";
+     else cout << "(" << x1 << "," << x2 << ")";
+        cout << endl << "f(x)<0 dla x: ";
+     if(a>0) cout << "(" << x1 << "," << x2 << ")";
+  else cout << "(-oo," << x1 <<"),(" << x2 << "+oo)";
+     cout << endl;
+      
+      
+  }else if(delta = 0)
+  {
+        cout << "x=" << p << endl;
+        cout << "f(x)>0 dla x: ";
+        if(a>0) cout << "Zbior Rzeczywisty / {" << p <<"}";
+        else  cout << "Zbior Pusty";
+         
+        cout << endl << "f(x)<0 dla x: ";
+       if(a>0)  cout << "Zbior Pusty";
+       else cout << "Zbior Rzeczywisty / {" << p <<"}";
+         
+         
+}else
+{
+     cout << "Brak miejsc zerowych!" << endl;
+     cout << "f(x)>0 dla x: ";
+    if(a>0) cout << "Zbior Rzeczywisty";
+        else  cout << "Zbior Pusty";
+         
+         
+          cout << endl << "f(x)<0 dla x: ";
+        if(a<0) cout << "Zbior Rzeczywisty";
+        else  cout << "Zbior Pusty";
+      
+}
