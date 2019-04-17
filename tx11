@@ -1,0 +1,33 @@
+#include <iostream>
+ 
+int main()
+{
+ 
+    using namespace std;
+int waga, wzrost;
+float bmi;
+ 
+ 
+      
+cout << "Podaj swoj wzrost(cm): ";
+cin >> wzrost;
+ 
+while(wzrost < 40 or wzrost > 300)
+{
+   cout << "Wzrost nieprawidlowy: Podaj ponownie: ";
+   cin >> wzrost;
+}
+ 
+cout << "Podaj swoja wage(kg): ";
+cin >> waga;
+ 
+while(waga < 30 or waga > 500)
+{
+   cout << "Waga nieprawidlowa: Podaj ponownie: ";
+   cin >> waga;
+}
+ 
+bmi = waga / (wzrost*wzrost/10000.); 
+ 
+cout << "Twoje BMI wynosi:" << endl;
+cout << bmi << endl << endl;
